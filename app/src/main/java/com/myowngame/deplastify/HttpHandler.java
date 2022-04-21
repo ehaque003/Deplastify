@@ -10,7 +10,7 @@ public class HttpHandler {
         new Thread() {
             public void run() {
                 try{
-                    String url = "http://testapp-346501.wm.r.appspot.com/message?message=1000";
+                    String url = "http://testapp-346501.wm.r.appspot.com/message?message="+impact;
                     URL urlObj = new URL(url);
                     HttpURLConnection conn = (HttpURLConnection) urlObj.openConnection();
                     conn.setRequestMethod("GET");

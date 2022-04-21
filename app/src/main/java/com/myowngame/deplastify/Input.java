@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
@@ -33,6 +34,8 @@ public class Input extends AppCompatActivity {
                 HttpHandler httpHandler = new HttpHandler();
                 httpHandler.handler(amountOfTrashMade);
                 writeToDB();
+                Intent intent = new Intent(Input.this, Log.class);
+                startActivity(intent);
             }
         });
     }
@@ -41,7 +44,7 @@ public class Input extends AppCompatActivity {
     public void writeToDB(){
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         LocalDateTime time = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         String timestring = time.format(formatter);
         ContentValues values = new ContentValues();
         values.put(AppDataRepo.WasteCountEntry.COLUMN_NAME_DATETIME, timestring);

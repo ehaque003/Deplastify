@@ -6,7 +6,7 @@ public class AppDataRepo {
     private AppDataRepo() {}
 
     public static class WasteCountEntry implements BaseColumns {
-        public static final String TABLE_NAME = "WASTECOUNT";
+        public static final String TABLE_NAME = "PLASTICWASTECOUNT";
         public static final String COLUMN_NAME_WASTEAMOUNT = "WasteAmount";
         public static final String COLUMN_NAME_DATETIME = "DateTime";
     }
@@ -14,7 +14,7 @@ public class AppDataRepo {
     public static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + WasteCountEntry.TABLE_NAME + " (" +
                     WasteCountEntry._ID + " INTEGER PRIMARY KEY, " +
-                    WasteCountEntry.COLUMN_NAME_DATETIME + "DATETIME," +
+                    WasteCountEntry.COLUMN_NAME_DATETIME + " DATETIME, " +
                     WasteCountEntry.COLUMN_NAME_WASTEAMOUNT + " INT " +
                     ")";
 
