@@ -25,6 +25,7 @@ public class Input extends AppCompatActivity {
         dbHelper = new AppDataDBHelper(getBaseContext());
         EditText trashSubmission = findViewById(R.id.amountOfTrashMade);
         Button submit = findViewById(R.id.Submit);
+        Button home = findViewById(R.id.home2);
         submit.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
@@ -35,6 +36,13 @@ public class Input extends AppCompatActivity {
                 httpHandler.handler(amountOfTrashMade);
                 writeToDB();
                 Intent intent = new Intent(Input.this, Log.class);
+                startActivity(intent);
+            }
+        });
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Input.this, MainActivity.class);
                 startActivity(intent);
             }
         });

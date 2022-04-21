@@ -17,7 +17,7 @@ public class Graph extends AppCompatActivity {
 
     // creating a variable
     // for our graph view.
-//    GraphView graphView;
+    //GraphView graphView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +38,6 @@ public class Graph extends AppCompatActivity {
                 new DataPoint(8, Log.data.get(Log.data.size()-8)),
                 new DataPoint(9, Log.data.get(Log.data.size()-9)),
                 new DataPoint(10, Log.data.get(Log.data.size()-10))
-
-
         });
 
         graphView.addSeries(series);
