@@ -6,14 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".Log">
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvScoreTable"
         android:layout_width="349dp"
         android:layout_height="224dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="324dp"
-        android:background="#C14152B3"
-        android:backgroundTint="#3F51B5"
+        android:background="#C16CA6EF"
+        android:backgroundTint="#C16CA6EF"
+        android:backgroundTintMode="src_atop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,29 +35,45 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="72dp"
+        android:fontFamily="@font/romancelogicfont"
         android:text="Date"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rvScoreTable"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="72dp"
+        android:fontFamily="@font/romancelogicfont"
         android:text="Amount of Plastic Waste"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rvScoreTable"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/seeGraph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="78dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="84dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/romancelogicfont"
         android:text="See Graph"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvScoreTable" />
 
@@ -53,9 +81,13 @@
         android:id="@+id/backHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="58dp"
-        android:text="Back Home"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/romancelogicfont"
+        android:text="Home"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seeGraph" />
 

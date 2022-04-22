@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    android:backgroundTint="@android:color/holo_blue_light"
     tools:context=".MainActivity">
 
     <!--line graph view where we will
@@ -25,8 +26,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="52dp"
-        android:text="Back to Log" />
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="47dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/romancelogicfont"
+        android:text="Back to Log"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
