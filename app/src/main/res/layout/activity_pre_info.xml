@@ -6,25 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".PreInfoActivity">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.16"
+        app:srcCompat="@drawable/background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="120dp"
-        android:text="How big is your trash bag at home?"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/romancelogicfont"
+        android:gravity="center"
+        android:text="How much trash can your trash bag hold"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:fontFamily="@font/romancelogicfont"
+        android:gravity="center"
+        android:text="What percentage of products do you use are plastic"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/usagePercentOfPlastic"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/sizeOfTrashBag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="105dp"
-        android:layout_marginTop="47dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
+        android:fontFamily="@font/maronrose"
         android:hint="In Pounds"
         android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -32,30 +62,28 @@
         android:id="@+id/usagePercentOfPlastic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="105dp"
-        android:layout_marginBottom="101dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="48dp"
         android:ems="10"
+        android:fontFamily="@font/maronrose"
         android:hint="In Percentage(%)"
         android:inputType="textPersonName"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/done"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="34dp"
-        android:text="In percentage, how many products that you use have signifact amount of plastic?"
-        app:layout_constraintBottom_toTopOf="@+id/usagePercentOfPlastic"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginBottom="137dp"
-        android:text="done"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/romancelogicfont"
+        android:text="Submit"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

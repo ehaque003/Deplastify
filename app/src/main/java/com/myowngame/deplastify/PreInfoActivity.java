@@ -48,7 +48,7 @@ public class PreInfoActivity extends AppCompatActivity {
                 myEdit.putInt("sizeOfTrashBag", sizeOfTrashBag);
                 myEdit.putInt("usagePercentage", usagePercentage);
                 myEdit.commit();
-                Intent intent = new Intent(PreInfoActivity.this, MainActivity.class);
+                Intent intent = new Intent(PreInfoActivity.this, Tutorial.class);
                 startActivity(intent);
             }
         });
