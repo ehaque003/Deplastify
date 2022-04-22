@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,8 +31,13 @@ public class Input extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
+                SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
+                SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                myEdit.putBoolean("hasInputtedFirstData", true);
+                myEdit.commit();
                 String temp = trashSubmission.getEditableText().toString();
                 amountOfTrashMade = Integer.parseInt(temp);
+                amountOfTrashMade = (int)(amountOfTrashMade*0.82);
                 HttpHandler httpHandler = new HttpHandler();
                 httpHandler.handler(amountOfTrashMade);
                 writeToDB();

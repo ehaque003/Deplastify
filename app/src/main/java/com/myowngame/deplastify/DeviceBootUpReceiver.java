@@ -26,7 +26,7 @@ public class DeviceBootUpReceiver extends BroadcastReceiver {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "Alarm Notification");
         builder.setContentTitle("Daily Plastic Consumption Logging");
         builder.setContentText("Have you logged your daily plastic consumption yet? If you haven't, go ahead and do it right now!");
-        builder.setSmallIcon(R.drawable.ic_launcher_background);
+        builder.setSmallIcon(R.drawable.deplastify_logo);
         builder.setAutoCancel(true);
 
         NotificationManagerCompat managerCompat = NotificationManagerCompat.from(context);

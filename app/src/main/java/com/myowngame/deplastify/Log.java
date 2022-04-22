@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,8 +46,13 @@ public class Log extends AppCompatActivity {
         seeGraph.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Log.this, Graph.class);
-                startActivity(intent);
+                if(data.size() <= 5){
+                    Toast.makeText(getBaseContext(), "Need At Least 3 Entries To Use The Graph", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Intent intent = new Intent(Log.this, Graph.class);
+                    startActivity(intent);
+                }
             }
         });
     }

@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
         boolean hasUsedAppOnceBefore = sh.getBoolean("usedAppFirstTime", true);
+        boolean hasInputtedFirstData = sh.getBoolean("hasInputtedFirstData", false);
         if(hasUsedAppOnceBefore){
             Intent intent = new Intent(MainActivity.this, PreInfoActivity.class);
             startActivity(intent);
@@ -33,8 +35,13 @@ public class MainActivity extends AppCompatActivity {
             log.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(MainActivity.this, Log.class);
-                    startActivity(intent);
+                    if(hasInputtedFirstData){
+                        Intent intent = new Intent(MainActivity.this, Log.class);
+                        startActivity(intent);
+                    }
+                    else{
+                        Toast.makeText(getBaseContext(), "Need At Least One Entry Before Using Log", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
             tutorial.setOnClickListener(new View.OnClickListener() {
