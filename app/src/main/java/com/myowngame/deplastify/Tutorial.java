@@ -13,7 +13,7 @@ public class Tutorial extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
-        Button home = findViewById(R.id.home);
+        Button home = findViewById(R.id.button2);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
